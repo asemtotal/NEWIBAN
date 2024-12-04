@@ -1,6 +1,6 @@
 function display() {
     var e = document.getElementById("country_input").value;
-    window.history.pushState(null, '', '?country=' + e);
+    updateUrl('?country=' + e);
     var country_input = e;
     var how = buildIbans(country_input);
     document.getElementById("demo").innerHTML = how;
@@ -17,9 +17,8 @@ function getParameterByName(name, url) {
 }
 
 function updateUrl(url_extension){
-    window.history.pushState('page2', 'Title', '/'+url_extension);
+    window.history.pushState(null, '', '/NEWIBAN/' + url_extension);
 }
-
 
 $('document').ready(function() {
 
@@ -34,7 +33,7 @@ $('document').ready(function() {
     var active_country = null;
     if (getParameterByName("country") === null){
         active_country = "Netherlands";
-        updateUrl("?country=Netherlands");
+        updateUrl('?country=Netherlands');
     }
     else{
         active_country = getParameterByName("country");
