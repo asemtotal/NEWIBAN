@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; URL=/NEWIBAN/">
-  <title>Redirecting...</title>
-  <script>
-    window.onload = function() {
-      const pathSegments = window.location.pathname.split('/');
-      if (!pathSegments.includes('NEWIBAN')) {
-        window.location.replace('/NEWIBAN/');
-      }
-    };
-  </script>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        window.onload = function() {
+            const basePath = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/';
+            const searchParams = window.location.search || '';
+            window.location.replace(basePath + 'index.html' + searchParams);
+        };
+    </script>
 </head>
 <body>
-  <h1>Redirecting...</h1>
-  <p>If you are not redirected automatically, <a href="/NEWIBAN/">click here</a>.</p>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, <a id="redirect-link" href="#">click here</a>.</p>
+    <script>
+        const basePath = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/';
+        document.getElementById('redirect-link').href = basePath + 'index.html';
+    </script>
 </body>
 </html>
