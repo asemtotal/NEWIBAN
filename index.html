@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="static/sample.css">
+    <meta name="viewport" content="initial-scale=1" />
+    
+    <!-- روابط CDN للمكتبات الخارجية -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://chancejs.com/chance.min.js"></script>
+
+    <!-- الروابط للملفات المحلية داخل مجلد static -->
+    <script type="text/javascript" src="static/mapp4.js"></script>
+    <script type="text/javascript" src="static/countries.js"></script>
+    <script type="text/javascript" src="static/functions.js"></script>
+</head>
+
+<body>
+    
+
+    <h1>Random Iban Generator</h1>
+
+    <p id="demo" class="ibandisplay"></p>
+
+    <div class="center_align">
+        <select id="country_input" align="middle" onChange="display(this.value);">
+        </select>
+    </div>
+    <br>
+    <div class="center_align">
+        <button onclick="display()" id="gen_button" align="middle" class="generate_button">Generate IBAN</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (!urlParams.has('country')) {
+                window.location.href = './index.html';
+            }
+        };
+    </script>
+    </body>
+
+</html>

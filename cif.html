@@ -1,0 +1,48 @@
+
+<html>
+
+<!-- Mirrored from randomiban.com/cif.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2024 04:39:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <link rel="stylesheet" type="text/css" href="static/sample.css">
+  <meta name="viewport" content="initial-scale=1" />
+
+</head>
+<body>
+    
+    <h1>Random Iban Generator</h1>
+
+<p id="demo" class="ibandisplay"></p>
+<script type="text/javascript" src="../cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+<script src="../cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="chance.min.html"></script> 
+<script type="text/javascript" src="staticmapp.html"></script>
+<script type="text/javascript">
+  var x = document.getElementById("demo").innerHTML = buildIban("Netherlands");
+</script>
+
+<script type="text/javascript">
+  function display() {
+  var e = document.getElementById("country_input").value;
+  var country_input = e;
+  var how = buildIban(country_input);
+  document.getElementById("demo").innerHTML = how;
+}
+</script>
+<br>
+<div class="center_align">
+  <button onclick="display()" id="gen_button" align="middle" class="generate_button">Generate CIF</button>
+</div>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (!urlParams.has('country')) {
+                window.location.href = './index.html';
+            }
+        };
+    </script>
+    </body>
+
+<!-- Mirrored from randomiban.com/cif.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2024 04:39:39 GMT -->
+</html>

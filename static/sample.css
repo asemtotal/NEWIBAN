@@ -1,0 +1,93 @@
+body {
+    background-color: black; /* تغيير خلفية الموقع إلى اللون الأسود */
+}
+
+h1 {
+    color: white;
+    font-family: 'Trocchi', serif;
+    text-align: center;
+    font-size: 45px;
+}
+
+.ibandisplay {
+    color: white;
+    text-align: center;
+    font-family: verdana;
+    font-size: 60px;
+    font-size: 3.5vw;
+}
+
+.country_select {
+    font-size: 16px;
+}
+
+.generate_button {
+    color: white;
+    background: #d0451b;
+    font-size: 15px;
+    padding: 10px 20px 10px 10px;
+}
+
+.center_align {
+    text-align: center;
+}
+
+.generate_button:hover {
+    color: white;
+    background: #bc3315;
+}
+
+/* nav styles removed */
+/* nav {
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+    color: #888;
+    display: block;
+    margin: 8px 22px 8px 22px;
+    overflow: hidden;
+    width: 90%; 
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    transition: all 0.2s; 
+}
+
+nav > ul > li > a {
+    color: #aaa;
+    display: block;
+    line-height: 56px;
+    padding: 0 24px;
+    text-decoration: none;
+}
+
+nav > ul > li:hover {
+    background-color: rgb( 40, 44, 47 );
+}
+
+nav > ul > li:hover > a {
+    color: rgb( 255, 255, 255 );
+}
+
+nav > ul > li > div {
+    background-color: rgb( 40, 44, 47 );
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 165px;
+    visibility: hidden;
+}
+
+nav > ul > li:hover > div {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
